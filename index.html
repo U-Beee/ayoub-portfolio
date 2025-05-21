@@ -1,63 +1,97 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ayoub Ajnaki | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-</head>
-<body>
+/* Reset and base styling */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  background: url('images/background.png') repeat;
+  background-size: cover;
+}
 
-<header>
-  <div class="logo">
-    <a href="#"><img src="images/logo.png" alt="Logo"></a>
-  </div>
-  <nav>
-    <a href="#projects">Projects</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
 
-<section class="hero">
-  <h1>I'm Ayoub Ajnaki</h1>
-  <p>Software Engineering Student | Aspiring Game & Web Developer</p>
-  <a href="#projects">View Projects</a>
-  <a href="#contact">Contact Me</a>
-</section>
+/* Header */
+header {
+  text-align: center;
+  padding: 50px 20px;
+  color: white;
+  background: rgba(0, 0, 0, 0.7);
+}
 
-<section class="projects" id="projects">
-  <h2>My Projects</h2>
-  <div id="project-grid" class="project-grid"></div>
-  <div class="pagination">
-    <button id="prevPage">Prev</button>
-    <button id="nextPage">Next</button>
-  </div>
-</section>
+header h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
 
-<section class="about" id="about">
-  <h2>About Me</h2>
-  <p>I'm Ayoub Ajnaki, a passionate software engineering student who loves building games and web apps. Experience in GITEX, customer service, and a lifelong gamer. Tools: Python, HTML, CSS, and GitHub.</p>
-</section>
+header p {
+  font-size: 20px;
+}
 
-<section class="contact" id="contact">
-  <h2>Contact Me</h2>
-  <p>Email: <a href="mailto:introayoubag@gmail.com">introayoubag@gmail.com</a></p>
-  <p>Phone: +212 89658607</p>
-  <p class="social-icons">
-    <a href="https://www.youtube.com/@U-Beee" target="_blank"><i class="fab fa-youtube"></i></a>
-    <a href="https://www.instagram.com/ubeee_oficial" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="https://web.facebook.com/ayoub.ajnaki.7" target="_blank"><i class="fab fa-facebook"></i></a>
-    <a href="https://github.com/U-Beee" target="_blank"><i class="fab fa-github"></i></a>
-    <a href="https://www.linkedin.com/in/ayoub-ajnaki/" target="_blank"><i class="fab fa-linkedin"></i></a>
-  </p>
-</section>
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+}
 
-<footer>
-  &copy; 2025 Ayoub Ajnaki — All Rights Reserved
-</footer>
+.hero a {
+  display: inline-block;
+  padding: 14px 28px;
+  background: #00C897;
+  color: white;
+  border-radius: 8px;
+  margin: 10px 8px;
+  text-decoration: none;
+  font-size: 18px;
+  transition: background 0.3s;
+}
 
-</body>
-</html>
+.hero a:hover {
+  background: #009e78;
+}
+
+/* Sections */
+section {
+  background: rgba(255, 255, 255, 0.95);
+  margin: 40px auto;
+  border-radius: 12px;
+  padding: 50px 20px;
+}
+
+section h2 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 25px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  margin-top: 50px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 34px;
+  }
+
+  header p {
+    font-size: 16px;
+  }
+
+  .hero a {
+    font-size: 16px;
+    padding: 12px 20px;
+  }
+
+  section h2 {
+    font-size: 28px;
+  }
+}
