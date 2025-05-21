@@ -5,74 +5,50 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Ayoub Ajnaki | Portfolio</title>
   <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
-<header>
-  <div class="logo">
-    <img src="images/logo.png" alt="Logo">
-  </div>
-  <nav>
-    <a href="#projects">Projects</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
-
-<section class="hero">
-  <div class="hero-text">
-    <h1>I'm Ayoub Ajnaki</h1>
-    <p>A Software Engineering Student passionate about creating web apps and games. Welcome to my digital world!</p>
-    <div class="hero-buttons">
-      <a href="#projects">View Projects</a>
-      <a href="#contact">Contact Me</a>
-    </div>
-  </div>
-  <div class="hero-image">
-    <img src="images/ayoub.png" alt="Ayoub Ajnaki">
-  </div>
-</section>
-
-<section class="projects" id="projects">
-  <h2>My Projects</h2>
-  <div class="project-grid">
-    <div class="card">
-      <img src="images/project1.png" alt="Project 1">
-      <div class="card-content">
-        <h3>Project Title 1</h3>
-        <p>A short description about what this project does.</p>
-        <a href="#" class="view-code" target="_blank">View Code</a>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>Ayoub Ajnaki</h1>
+        <p>Software Engineering Student | Aspiring Game & Web Developer</p>
+        <p>Passionate about creating engaging games and dynamic web experiences. Currently sharpening my skills in Python, JavaScript, and modern web tools, with a dream of building indie games and contributing to open-source projects.</p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn">View Projects</a>
+          <a href="#contact" class="btn btn-alt">Contact Me</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="images/ayoub.png" alt="Ayoub Ajnaki">
       </div>
     </div>
-    <!-- Add more project cards -->
-  </div>
-</section>
+  </section>
 
-<section class="about" id="about">
-  <h2>About Me</h2>
-  <p>I'm Ayoub Ajnaki, a Software Engineering student deeply passionate about coding, game development, and creating modern web applications. I love discovering new tools, improving my skills, and bringing ideas to life through technology. I’ve participated in events like GITEX, worked in customer service, and constantly grow through hands-on projects. I enjoy gaming, design, and turning code into beautiful experiences.</p>
-</section>
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>My Projects</h2>
+    <div class="projects-container" id="projectsContainer"></div>
+    <div class="pagination" id="pagination"></div>
+  </section>
 
-<section class="contact" id="contact">
-  <h2>Contact Me</h2>
-  <div class="contact-info">
-    <p><i class="fas fa-envelope"></i> <a href="mailto:introayoubag@gmail.com">introayoubag@gmail.com</a></p>
-    <p><i class="fas fa-phone"></i> +212 89658607</p>
-    <div class="social-icons">
-      <a href="https://www.youtube.com/@U-Beee" target="_blank"><i class="fab fa-youtube"></i></a>
-      <a href="https://www.instagram.com/ubeee_oficial" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://web.facebook.com/ayoub.ajnaki.7" target="_blank"><i class="fab fa-facebook"></i></a>
-      <a href="https://github.com/U-Beee" target="_blank"><i class="fab fa-github"></i></a>
-      <a href="https://www.linkedin.com/in/ayoub-ajnaki/" target="_blank"><i class="fab fa-linkedin"></i></a>
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <div class="contact-content">
+      <div class="contact-image">
+        <img src="images/contact.png" alt="Contact Ayoub">
+      </div>
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
     </div>
-  </div>
-</section>
+  </section>
 
-<footer>
-  &copy; 2025 Ayoub Ajnaki — All Rights Reserved
-</footer>
-
+  <script src="script.js"></script>
 </body>
 </html>
