@@ -2,53 +2,194 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ayoub Ajnaki | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: url('images/background.png') no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+    }
+    header {
+      background: rgba(0, 200, 151, 0.9);
+      padding: 15px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+    .logo img {
+      height: 50px;
+      cursor: pointer;
+    }
+    nav a {
+      color: white;
+      margin: 0 20px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .hero {
+      text-align: center;
+      padding: 100px 20px;
+      color: white;
+      text-shadow: 0 0 6px rgba(0,0,0,0.7);
+    }
+    .hero h1 {
+      font-size: 52px;
+      margin-bottom: 15px;
+    }
+    .hero p {
+      font-size: 22px;
+      margin-bottom: 30px;
+    }
+    .hero a {
+      padding: 12px 24px;
+      background: #333;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      margin: 5px;
+      display: inline-block;
+    }
+    .projects, .about, .contact {
+      padding: 70px 20px;
+      max-width: 1200px;
+      margin: auto;
+      background: rgba(255,255,255,0.9);
+      border-radius: 20px;
+      margin-bottom: 40px;
+    }
+    .projects h2, .about h2, .contact h2 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .project-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      overflow: hidden;
+      flex: 0 1 calc(33.333% - 20px);
+      display: flex;
+      flex-direction: column;
+    }
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .card-content {
+      padding: 20px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .card-content h3 {
+      margin-top: 0;
+    }
+    .tags {
+      margin-top: 10px;
+    }
+    .tags span {
+      background: #eee;
+      padding: 5px 10px;
+      border-radius: 20px;
+      margin: 3px;
+      display: inline-block;
+      font-size: 14px;
+    }
+    .card-content a {
+      margin-top: auto;
+      text-decoration: none;
+      color: #00C897;
+      font-weight: bold;
+    }
+    .footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    .social-icons a {
+      color: #333;
+      margin: 0 10px;
+      text-decoration: none;
+      font-size: 20px;
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content">
-      <div class="hero-text">
-        <h1>Ayoub Ajnaki</h1>
-        <p>Software Engineering Student | Aspiring Game & Web Developer</p>
-        <p>Passionate about creating engaging games and dynamic web experiences. Currently sharpening my skills in Python, JavaScript, and modern web tools, with a dream of building indie games and contributing to open-source projects.</p>
-        <div class="hero-buttons">
-          <a href="#projects" class="btn">View Projects</a>
-          <a href="#contact" class="btn btn-alt">Contact Me</a>
-        </div>
-      </div>
-      <div class="hero-image">
-        <img src="images/ayoub.png" alt="Ayoub Ajnaki">
+<header>
+  <div class="logo">
+    <a href="#"><img src="images/logo.png" alt="Ayoub Ajnaki Logo"></a>
+  </div>
+  <nav>
+    <a href="#projects">Projects</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>I'm Ayoub Ajnaki</h1>
+  <p>Software Engineering Student | Aspiring Game & Web Developer</p>
+  <a href="#projects">View Projects</a>
+  <a href="#contact">Contact Me</a>
+</section>
+
+<section class="projects" id="projects">
+  <h2>My Projects</h2>
+  <div class="project-grid">
+    <!-- Example Project Card -->
+    <div class="card">
+      <img src="images/snake_game.png" alt="Snake Game">
+      <div class="card-content">
+        <h3>Snake Game</h3>
+        <p>Classic snake game where the snake grows after eating food. Great to learn loops and collision detection.</p>
+        <div class="tags"><span>Pygame</span></div>
       </div>
     </div>
-  </section>
+    <!-- Add other cards as before -->
+  </div>
+</section>
 
-  <!-- Projects Section -->
-  <section id="projects">
-    <h2>My Projects</h2>
-    <div class="projects-container" id="projectsContainer"></div>
-    <div class="pagination" id="pagination"></div>
-  </section>
+<section class="about" id="about">
+  <h2>About Me</h2>
+  <p>I'm Ayoub Ajnaki, a passionate software engineering student who loves building practical coding projects, games, and web apps. I’ve gained experience in customer service, participated at GITEX Technology Week, and enjoy gaming, volleyball, and watching films. I speak Arabic, English, and German (B1), with intermediate French, and my tools include Python, HTML, CSS, and GitHub.</p>
+  <p>This site showcases my projects and learning journey, and I aim to expand it with more apps, games, and web tools in the future.</p>
+</section>
 
-  <!-- Contact Section -->
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <div class="contact-content">
-      <div class="contact-image">
-        <img src="images/contact.png" alt="Contact Ayoub">
-      </div>
-      <form>
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-    </div>
-  </section>
+<section class="contact" id="contact">
+  <h2>Contact Me</h2>
+  <p>Email: <a href="mailto:introayoubag@gmail.com">introayoubag@gmail.com</a></p>
+  <p>Phone: +212 89658607</p>
+  <p class="social-icons">
+    <a href="https://www.youtube.com/@U-Beee" target="_blank"><i class="fab fa-youtube"></i></a>
+    <a href="https://www.instagram.com/ubeee_oficial" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://web.facebook.com/ayoub.ajnaki.7" target="_blank"><i class="fab fa-facebook"></i></a>
+    <a href="https://github.com/U-Beee" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="https://www.linkedin.com/in/ayoub-ajnaki/" target="_blank"><i class="fab fa-linkedin"></i></a>
+  </p>
+</section>
 
-  <script src="script.js"></script>
+<div class="footer">
+  &copy; 2025 Ayoub Ajnaki — All Rights Reserved
+</div>
+
 </body>
 </html>
