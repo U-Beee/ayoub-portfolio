@@ -1,28 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ayoub Ajnaki | Portfolio</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
   <style>
+    /* Base */
     body {
       margin: 0;
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: url('images/background.png') no-repeat center center fixed;
       background-size: cover;
       color: #333;
     }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    h1, h2 {
+      text-align: center;
+      margin: 0 0 20px 0;
+    }
+
+    /* Header */
     header {
       background: rgba(0, 200, 151, 0.9);
       padding: 15px 30px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-    }
-    .logo {
-      display: flex;
-      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
     .logo img {
       height: 50px;
@@ -30,105 +43,194 @@
     }
     nav a {
       color: white;
-      margin: 0 20px;
-      text-decoration: none;
-      font-weight: 500;
+      margin: 0 15px;
+      font-weight: 600;
+      transition: color 0.3s;
     }
     nav a:hover {
       text-decoration: underline;
+      color: #000;
     }
+
+    /* Hero Section */
     .hero {
-      text-align: center;
-      padding: 100px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 100px 20px 80px 20px;
+      background: rgba(30, 60, 114, 0.85);
       color: white;
-      text-shadow: 0 0 6px rgba(0,0,0,0.7);
+      text-shadow: 0 0 6px rgba(0, 0, 0, 0.7);
     }
     .hero h1 {
-      font-size: 52px;
+      font-size: 3.5rem;
       margin-bottom: 15px;
     }
     .hero p {
-      font-size: 22px;
+      font-size: 1.5rem;
       margin-bottom: 30px;
+      max-width: 600px;
+      text-align: center;
     }
     .hero a {
-      padding: 12px 24px;
+      display: inline-block;
+      padding: 12px 28px;
+      margin: 0 10px;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .btn-primary {
+      background: #00c897;
+      color: white;
+      border: none;
+    }
+    .btn-primary:hover {
+      background: #009f6a;
+    }
+    .btn-secondary {
       background: #333;
       color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      margin: 5px;
-      display: inline-block;
+      border: none;
     }
-    .projects, .about, .contact {
+    .btn-secondary:hover {
+      background: #111;
+    }
+
+    /* Projects Section */
+    #projects {
+      background: rgba(255, 255, 255, 0.95);
       padding: 70px 20px;
       max-width: 1200px;
-      margin: auto;
-      background: rgba(255,255,255,0.9);
+      margin: 40px auto;
       border-radius: 20px;
-      margin-bottom: 40px;
-    }
-    .projects h2, .about h2, .contact h2 {
-      text-align: center;
-      margin-bottom: 40px;
     }
     .project-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
     }
-    .card {
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    .project-card {
+      background: #fafafa;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
       overflow: hidden;
-      flex: 0 1 calc(33.333% - 20px);
       display: flex;
       flex-direction: column;
+      transition: transform 0.3s ease;
     }
-    .card img {
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+    .project-card img {
       width: 100%;
       height: 180px;
       object-fit: cover;
+      border-bottom: 1px solid #ddd;
     }
-    .card-content {
+    .project-card-content {
       padding: 20px;
-      flex: 1;
+      flex-grow: 1;
       display: flex;
       flex-direction: column;
     }
-    .card-content h3 {
+    .project-card-content h3 {
       margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 1.4rem;
+    }
+    .project-card-content p {
+      flex-grow: 1;
+      margin-bottom: 15px;
+      color: #555;
     }
     .tags {
-      margin-top: 10px;
+      margin-bottom: 15px;
     }
     .tags span {
-      background: #eee;
-      padding: 5px 10px;
-      border-radius: 20px;
-      margin: 3px;
       display: inline-block;
-      font-size: 14px;
+      background: #e0e0e0;
+      color: #555;
+      border-radius: 20px;
+      padding: 5px 12px;
+      font-size: 0.85rem;
+      margin-right: 8px;
     }
-    .card-content a {
-      margin-top: auto;
-      text-decoration: none;
-      color: #00C897;
-      font-weight: bold;
+    .view-btn {
+      align-self: flex-start;
+      background: #1e90ff;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: background 0.3s ease;
     }
-    .footer {
+    .view-btn:hover {
+      background: #4169e1;
+    }
+
+    /* About Section */
+    #about {
+      background: rgba(255, 255, 255, 0.95);
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 70px 30px;
+      border-radius: 20px;
+      color: #222;
+    }
+    #about p {
+      line-height: 1.6;
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+    }
+
+    /* Contact Section */
+    #contact {
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: white;
+      padding: 70px 20px;
+      max-width: 900px;
+      margin: 40px auto 80px;
+      border-radius: 20px;
+      text-align: center;
+    }
+    #contact a {
+      color: #00c897;
+      font-weight: 600;
+    }
+    .social-icons {
+      margin-top: 25px;
+    }
+    .social-icons a {
+      color: white;
+      font-size: 26px;
+      margin: 0 12px;
+      transition: color 0.3s;
+    }
+    .social-icons a:hover {
+      color: #00c897;
+    }
+
+    /* Footer */
+    footer {
       background: #222;
       color: white;
       text-align: center;
-      padding: 20px;
+      padding: 18px 20px;
+      font-size: 0.9rem;
+      user-select: none;
     }
-    .social-icons a {
-      color: #333;
-      margin: 0 10px;
-      text-decoration: none;
-      font-size: 20px;
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+      .hero p {
+        font-size: 1.2rem;
+      }
     }
   </style>
 </head>
@@ -136,7 +238,7 @@
 
 <header>
   <div class="logo">
-    <a href="#"><img src="images/logo.png" alt="Ayoub Ajnaki Logo"></a>
+    <a href="#"><img src="images/logo.png" alt="Ayoub Ajnaki Logo" /></a>
   </div>
   <nav>
     <a href="#projects">Projects</a>
@@ -148,48 +250,140 @@
 <section class="hero">
   <h1>I'm Ayoub Ajnaki</h1>
   <p>Software Engineering Student | Aspiring Game & Web Developer</p>
-  <a href="#projects">View Projects</a>
-  <a href="#contact">Contact Me</a>
+  <a href="#projects" class="btn-primary">View Projects</a>
+  <a href="#contact" class="btn-secondary">Contact Me</a>
 </section>
 
-<section class="projects" id="projects">
+<section id="projects">
   <h2>My Projects</h2>
-  <div class="project-grid">
-    <!-- Example Project Card -->
-    <div class="card">
-      <img src="images/snake_game.png" alt="Snake Game">
-      <div class="card-content">
-        <h3>Snake Game</h3>
-        <p>Classic snake game where the snake grows after eating food. Great to learn loops and collision detection.</p>
-        <div class="tags"><span>Pygame</span></div>
-      </div>
-    </div>
-    <!-- Add other cards as before -->
+  <div class="project-grid" id="project-grid">
+    <!-- Projects will be inserted here by JS -->
   </div>
 </section>
 
-<section class="about" id="about">
+<section id="about">
   <h2>About Me</h2>
-  <p>I'm Ayoub Ajnaki, a passionate software engineering student who loves building practical coding projects, games, and web apps. I’ve gained experience in customer service, participated at GITEX Technology Week, and enjoy gaming, volleyball, and watching films. I speak Arabic, English, and German (B1), with intermediate French, and my tools include Python, HTML, CSS, and GitHub.</p>
-  <p>This site showcases my projects and learning journey, and I aim to expand it with more apps, games, and web tools in the future.</p>
-</section>
-
-<section class="contact" id="contact">
-  <h2>Contact Me</h2>
-  <p>Email: <a href="mailto:introayoubag@gmail.com">introayoubag@gmail.com</a></p>
-  <p>Phone: +212 89658607</p>
-  <p class="social-icons">
-    <a href="https://www.youtube.com/@U-Beee" target="_blank"><i class="fab fa-youtube"></i></a>
-    <a href="https://www.instagram.com/ubeee_oficial" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="https://web.facebook.com/ayoub.ajnaki.7" target="_blank"><i class="fab fa-facebook"></i></a>
-    <a href="https://github.com/U-Beee" target="_blank"><i class="fab fa-github"></i></a>
-    <a href="https://www.linkedin.com/in/ayoub-ajnaki/" target="_blank"><i class="fab fa-linkedin"></i></a>
+  <p>
+    I'm Ayoub Ajnaki, a passionate software engineering student who loves building practical coding projects, games, and web apps. I’ve gained experience in customer service, participated at GITEX Technology Week, and enjoy gaming, volleyball, and watching films. I speak Arabic, English, and German (B1), with intermediate French, and my tools include Python, HTML, CSS, and GitHub.
+  </p>
+  <p>
+    This site showcases my projects and learning journey, and I aim to expand it with more apps, games, and web tools in the future.
   </p>
 </section>
 
-<div class="footer">
-  &copy; 2025 Ayoub Ajnaki — All Rights Reserved
-</div>
+<section id="contact">
+  <h2>Contact Me</h2>
+  <p>Email: <a href="mailto:introayoubag@gmail.com">introayoubag@gmail.com</a></p>
+  <p>Phone: +212 89658607</p>
+  <div class="social-icons">
+    <a href="https://www.youtube.com/@U-Beee" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+    <a href="https://www.instagram.com/ub      text-decoration: underline;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 650px) {
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+      .hero p {
+        font-size: 1.2rem;
+      }
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav {
+        margin-top: 10px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+      nav a {
+        margin: 0 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="images/logo.png" alt="U-Beee Logo" />
+    </div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="hero">
+    <h1>Ayoub Ajnaki</h1>
+    <p>Software engineering student passionate about application development and game programming.</p>
+    <div>
+      <a href="#projects" class="btn-primary">View Projects</a>
+      <a href="#contact" class="btn-secondary">Contact Me</a>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hello! I’m Ayoub, a software engineering student who loves coding and problem solving. I am focused on building applications and pursuing a future career in game development. I enjoy learning new programming languages and exploring new technologies.</p>
+    <p>Currently, I am improving my skills in Python and web development while working on exciting projects to showcase here.</p>
+  </section>
+
+  <section id="projects">
+    <h2>My Projects</h2>
+    <div class="project-grid">
+
+      <article class="project-card">
+        <img src="images/project1.png" alt="Project 1 Screenshot" />
+        <div class="project-card-content">
+          <h3>U-Beee Course Platform</h3>
+          <p>A website to sell courses online featuring favorites and shopping cart functionality.</p>
+          <div class="tags">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+          </div>
+          <a href="https://github.com/ayoub-ajnaki/ubeee" target="_blank" rel="noopener" class="view-btn">View Code</a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <img src="images/project2.png" alt="Project 2 Screenshot" />
+        <div class="project-card-content">
+          <h3>Python Game</h3>
+          <p>A simple 2D game built with Python to practice game programming concepts.</p>
+          <div class="tags">
+            <span>Python</span>
+            <span>Pygame</span>
+          </div>
+          <a href="https://github.com/ayoub-ajnaki/python-game" target="_blank" rel="noopener" class="view-btn">View Code</a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <img src="images/project3.png" alt="Project 3 Screenshot" />
+        <div class="project-card-content">
+          <h3>Portfolio Website</h3>
+          <p>This personal portfolio website showcasing my projects and skills.</p>
+          <div class="tags">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+          </div>
+          <a href="https://github.com/ayoub-ajnaki/portfolio" target="_blank" rel="noopener" class="view-btn">View Code</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>If you want to get in touch, feel free to email me at <a href="mailto:ayoub.ajnaki@example.com">ayoub.ajnaki@example.com</a> or follow me on <a href="https://github.com/ayoub-ajnaki" target="_blank" rel="noopener">GitHub</a>.</p>
+  </section>
 
 </body>
 </html>
