@@ -1,97 +1,48 @@
-/* Reset and base styling */
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  color: #333;
-  background: url('images/background.png') repeat;
-  background-size: cover;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ayoub Ajnaki | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
 
-.container {
-  width: 90%;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 30px 20px;
-}
+  <header>
+    <div class="container">
+      <h1>Ayoub Ajnaki</h1>
+      <p>Software Engineering Student | Aspiring Game & Web Developer</p>
+    </div>
+  </header>
 
-/* Header */
-header {
-  text-align: center;
-  padding: 50px 20px;
-  color: white;
-  background: rgba(0, 0, 0, 0.7);
-}
+  <section class="hero">
+    <div class="container">
+      <a href="#projects">View Projects</a>
+      <a href="#contact">Contact Me</a>
+    </div>
+  </section>
 
-header h1 {
-  font-size: 48px;
-  margin-bottom: 10px;
-}
+  <section id="projects">
+    <div class="container">
+      <h2>Projects</h2>
+      <p>Coming soon — stay tuned!</p>
+    </div>
+  </section>
 
-header p {
-  font-size: 20px;
-}
+  <section id="contact">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <p>Email: ayoub@example.com</p>
+      <p>Phone: +212 6 00 00 00 00</p>
+    </div>
+  </section>
 
-/* Hero Section */
-.hero {
-  text-align: center;
-  padding: 80px 20px;
-}
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Ayoub Ajnaki. All rights reserved.</p>
+    </div>
+  </footer>
 
-.hero a {
-  display: inline-block;
-  padding: 14px 28px;
-  background: #00C897;
-  color: white;
-  border-radius: 8px;
-  margin: 10px 8px;
-  text-decoration: none;
-  font-size: 18px;
-  transition: background 0.3s;
-}
-
-.hero a:hover {
-  background: #009e78;
-}
-
-/* Sections */
-section {
-  background: rgba(255, 255, 255, 0.95);
-  margin: 40px auto;
-  border-radius: 12px;
-  padding: 50px 20px;
-}
-
-section h2 {
-  text-align: center;
-  font-size: 36px;
-  margin-bottom: 20px;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 25px;
-  background: rgba(0, 0, 0, 0.7);
-  color: white;
-  margin-top: 50px;
-}
-
-/* Responsive */
-@media (max-width: 600px) {
-  header h1 {
-    font-size: 34px;
-  }
-
-  header p {
-    font-size: 16px;
-  }
-
-  .hero a {
-    font-size: 16px;
-    padding: 12px 20px;
-  }
-
-  section h2 {
-    font-size: 28px;
-  }
-}
+</body>
+</html>
