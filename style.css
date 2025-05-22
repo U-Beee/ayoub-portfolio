@@ -87,15 +87,17 @@ header nav a:hover {
 
 /* About Section */
 .about {
-  padding: 60px 20px;
-  background: #eaeaea;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #f9f9f9 0%, #e6e6e6 100%);
   text-align: center;
 }
 
 .about h2 {
-  margin-bottom: 30px;
-  font-size: 2.5em;
-  color: #333;
+  margin-bottom: 35px;
+  font-size: 2.8em;
+  color: #222;
+  font-weight: bold;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .about-container {
@@ -103,28 +105,46 @@ header nav a:hover {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 30px;
-  background: #fff;
-  border-radius: 20px;
-  padding: 30px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  max-width: 1000px;
+  gap: 40px;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 25px;
+  padding: 40px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+  max-width: 1100px;
   margin: 0 auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.2);
 }
 
 .about-image {
-  width: 200px;
+  width: 220px;
   height: auto;
-  flex-shrink: 0;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.about-image:hover {
+  transform: scale(1.05);
 }
 
 .about-text {
   flex: 1 1 300px;
   max-width: 600px;
   text-align: left;
-  line-height: 1.7;
-  font-size: 1.1em;
-  color: #444;
+  line-height: 1.8;
+  font-size: 1.2em;
+  color: #333;
+  padding: 10px;
+  transition: color 0.3s ease;
+}
+
+.about-text:hover {
+  color: #00C897;
 }
 
 /* Projects Section */
