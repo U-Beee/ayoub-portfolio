@@ -32,7 +32,7 @@
 <body>
 
 <header>
-  <div><strong>Ayoub Ajnaki</strong></div>
+  <div><img src="images/logo.png" alt="Logo" style="height: 40px;"></div>
   <nav>
     <a href="#projects">Projects</a>
     <a href="#about">About</a>
@@ -144,21 +144,42 @@
 
 <section class="about" id="about">
   <h2>About Me</h2>
-  <p>I'm Ayoub Ajnaki, a passionate software engineering student who loves building practical coding projects, games, and web apps. I’ve gained experience in customer service, participated at GITEX Technology Week, and enjoy gaming, volleyball, and watching films. I speak Arabic, English, and German (B1), with intermediate French, and my tools include Python, HTML, CSS, and GitHub.</p>
-  <p>This site showcases my projects and learning journey, and I aim to expand it with more apps, games, and web tools in the future.</p>
+  <div class="about-container">
+    <img src="images/ayoub.jpg" alt="Ayoub Ajnaki" class="about-image">
+    <div class="about-text">
+      <p>I'm Ayoub Ajnaki, a passionate software engineering student who loves building practical coding projects, games, and web apps. I've gained experience in customer service, participated at GITEX Technology Week, and enjoy gaming, volleyball, and watching films. I speak Arabic, English, and German (B1), with intermediate French, and my tools include Python, HTML, CSS, and GitHub.</p>
+      <p>This site showcases my projects and learning journey, and I aim to expand it with more apps, games, and web tools in the future.</p>
+    </div>
+  </div>
 </section>
 
 <section class="contact" id="contact">
   <h2>Contact Me</h2>
-  <p>Email: <a href="mailto:introayoubag@gmail.com">introayoubag@gmail.com</a></p>
-  <p>Phone: +212 89658607</p>
-  <p class="social-icons">
-    <a href="https://www.youtube.com/@U-Beee" target="_blank"><i class="fab fa-youtube"></i></a>
-    <a href="https://www.instagram.com/ubeee_oficial" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="https://web.facebook.com/ayoub.ajnaki.7" target="_blank"><i class="fab fa-facebook"></i></a>
-    <a href="https://github.com/U-Beee" target="_blank"><i class="fab fa-github"></i></a>
-    <a href="https://www.linkedin.com/in/ayoub-ajnaki/" target="_blank"><i class="fab fa-linkedin"></i></a>
-  </p>
+  <div class="contact-container">
+    <form class="contact-form">
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+      <label for="email">Your Email</label>
+      <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+      <label for="message">Your Message</label>
+      <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+    <div class="contact-info">
+      <p>Email: <a href="mailto:introayoubag@gmail.com">introayoubag@gmail.com</a></p>
+      <p>Phone: +212 89658607</p>
+      <div class="social-icons">
+        <a href="https://www.youtube.com/@U-Beee" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.instagram.com/ubeee_oficial" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://web.facebook.com/ayoub.ajnaki.7" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://github.com/U-Beee" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/ayoub-ajnaki/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+  </div>
 </section>
 
 <div class="footer">
