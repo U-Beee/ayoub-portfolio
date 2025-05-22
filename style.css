@@ -88,7 +88,7 @@ header nav a:hover {
 /* About Section */
 .about {
   padding: 60px 20px;
-  background: #f4f4f4;
+  background: #eaeaea;
   text-align: center;
 }
 
@@ -104,7 +104,7 @@ header nav a:hover {
   align-items: center;
   justify-content: center;
   gap: 30px;
-  background: #ffffff;
+  background: #fff;
   border-radius: 20px;
   padding: 30px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
@@ -114,8 +114,8 @@ header nav a:hover {
 
 .about-image {
   width: 200px;
+  height: auto;
   flex-shrink: 0;
-  border-radius: 0;
 }
 
 .about-text {
