@@ -22,7 +22,7 @@ header {
 }
 
 header .logo {
-  max-height: 60px;
+  max-height: 40px;
   cursor: pointer;
 }
 
@@ -106,8 +106,8 @@ header nav a:hover {
 }
 
 .about-image {
-  width: 120px;
-  height: 120px;
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
   object-fit: cover;
   flex-shrink: 0;
