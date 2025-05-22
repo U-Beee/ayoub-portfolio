@@ -93,7 +93,9 @@ header nav a:hover {
 }
 
 .about h2 {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  font-size: 2.5em;
+  color: #333;
 }
 
 .about-container {
@@ -102,22 +104,27 @@ header nav a:hover {
   align-items: center;
   justify-content: center;
   gap: 30px;
-  padding: 40px 20px;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .about-image {
-  width: 300px;
-  border-radius: 50%;
-  object-fit: cover;
+  width: 200px;
   flex-shrink: 0;
+  border-radius: 0;
 }
 
 .about-text {
   flex: 1 1 300px;
   max-width: 600px;
   text-align: left;
-  line-height: 1.6;
+  line-height: 1.7;
   font-size: 1.1em;
+  color: #444;
 }
 
 /* Projects Section */
